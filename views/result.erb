@@ -1,0 +1,21 @@
+
+  
+  <div class="container1">
+  	<div class="jumbotron">
+    	<h1>Movies result</h1> 
+    </div>
+</div>
+
+
+  <div class="result">
+ 
+  <ul>
+  <% @sorted_by_year.each do |hash| %>
+    <li><a  class="col-xs-9" href='/result/<%= "#{hash["imdbID"]}" %>'> <%= hash["Title"] %></a> 
+    <span class="co-xs-3"><%= hash["Year"] %></span>
+
+    </li>
+  <% end %>
+  
+  </ul>
+</div>
