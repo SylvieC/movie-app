@@ -1,21 +1,29 @@
 
-  
-  <div class="container1">
-  	<div class="jumbotron">
-    	<h1>Movies result</h1> 
-    </div>
-</div>
-
-
-  <div class="result">
  
-  <ul>
-  <% @sorted_by_year.each do |hash| %>
-    <li><a  class="col-xs-9" href='/result/<%= "#{hash["imdbID"]}" %>'> <%= hash["Title"] %></a> 
-    <span class="co-xs-3"><%= hash["Year"] %></span>
-
-    </li>
-  <% end %>
+  <div class="container1">
+          <div class="jumbotron">
+            <h1>Movies result</h1> 
+          </div>
   
-  </ul>
-</div>
+
+  <div id="wrap">
+    <div class="result">
+ 
+     <ul>
+        <% @sorted_by_year.each do |hash| %>
+        <li>
+        	  <a  class="col-xs-9" href='/result/<%= "#{hash["imdbID"]}" %>'> <%= hash["Title"] %></a> 
+            <span class="co-xs-3"><%= hash["Year"] %></span>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+<footer>
+  <form accept-charset="UTF-8" action="/result" method="post">
+    <label for="movie">New Search</label>
+    <input id="movie" name="movie" type="text" />
+    <input name="commit" type="submit" class="btn btn-danger btn-sm" value="Search" /> 
+     </span>
+</footer>

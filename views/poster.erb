@@ -1,16 +1,45 @@
- 
+
+
+<div class="main">
+   <header>
+	   <h1>More about your selection</h1>
+		 <h3><em><%= @result["Title"] %></em></h3>
+   </header>
+  <% id = @result["imdbID"]%>
+  <% id = id[2,id.length-1].to_i %>
+  
+ <a href='http://www.imdb.com/title/tt<%= "#{id}" %>'>link to Imdb page</a>
+
+   <div class="container">
+  
+    <div class="col-xs-6 poster">
+	  	<img src=<%= @result["Poster"] %>> <br/>
+	  </div> 
+
+	  <div class ="col-xs-12 details">
+		  <div class="plot"><span id="plot"><strong>Plot</strong>: <%= @result["Plot"] %><br></span></div>
+		  <div class="actors"><strong>Actors</strong>: <%= @result["Actors"] %></div>
+		  <div class="moreInfo">
+		  <div class="releaseYear"><strong>Release year</strong>: <%= @result["Released"] %></div>
+		  <div class="rating"><strong>Rating</strong>: <%= @result["Rated"] %></div>
+		  <div class="runtime"><strong>Runtime</strong>: <%= @result["Runtime"] %></div>
+		  <div class="genre"><strong>Genre</strong>: <%= @result["Genre"] %></div>
+		  <div class="director"><strong>Director</strong>: <%= @result["Director"] %></div>
+		</div>
+		  
+ 		</div>	
+ 	</div>
+
 
  
- <h3><img src=<%= @result["Poster"] %>> </h3><br/>
-  <div class="plot">Plot:<%= @result["Plot"] %></div>
-  <div class="releaseYear">Release year:<%= @result["Release Year"] %></div>
-  <div class="rating">Rating:<%= @result["Rated"] %></div>
-  <div class="runtime">Runtime:<%= @result["Runtime"] %></div>
-  <div class="genre">Genre:<%= @result["Genre"] %></div>
-  <div class="director">Director:<%= @result["Director"] %></div>
-  <div class="actors">Actors:<%= @result["Actor"] %></div>
 
- <a href="/">New Search</a></body>
+
+<footer>
+  <form accept-charset="UTF-8" action="/result" method="post">
+    <label for="movie">New Search</label>
+    <input id="movie" name="movie" type="text" />
+    <input name="commit" type="submit" class="btn btn-danger btn-sm" value="Search" /> 
+</footer>
 
  
  

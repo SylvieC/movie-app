@@ -1,9 +1,7 @@
 
-
-
-
-
-
+body{
+	heigth: 100%;
+}
 
 
 h1 {
@@ -37,12 +35,64 @@ ul {
 }
 
 
+header {
+color: white;
+background: -webkit-gradient(linear, 23% 22%, 10% 29%, from(#00000F), to(#FF9D00));
+height: 200px;
+text-align: center;
+padding: 30px;
+
+}
+
+#plot {
+	width: 70px;
+}
+
+#titlePosterPage {
+	text-align: center;
+	font-size: 4em;
+}
 
 
+footer {
+	background: -webkit-gradient(linear, 23% 22%, 10% 29%, from(#00000F), to(#FF9D00));
+	text-align: center;
+	color: white;
+}
 
 
+#findMove{
+	positon:relative;
+	margin-left: 5px;
+}
+
+.poster {
+	margin-right: 10px;
+	margin-left: 20px;
+	float:left;
+}
+
+.container {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
 
 
+.plot{
+	boder: solit 2px;
+}
+
+.footer {
+  position: relative;
+  margin-top: -150px; 
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+} 
+
+#wrap {
+	margin-bottom: 20px
+}
 
 
 

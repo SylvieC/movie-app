@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <html>
    <head>
-   	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
-   	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+   	
+   	  <!-- App-like mobile view -->
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, user-scalable=no"/>
+                 
+                 <!-- Normalize -->
+                 <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+
+                 <!-- Boostrap core CSS -->
+                 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" type="text/css">
+
+                 <!-- Bootstrap styling CSS -->
+                 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" type="text/css">
+
+                 <!-- Local styling -->
+                 <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+                 <!-- Jquery -->
+                 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+                
+                <!-- Bootstrap JS -->
+                 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
    	<title> <%= @page_title || 'untitled' %></title>
    </head>
 
