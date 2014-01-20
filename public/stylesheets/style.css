@@ -17,10 +17,11 @@ h1 {
 }
 .jumbotron{
   color: white;
-  background:-webkit-gradient(linear, 99% 0%, 19% 13%, from(#0F0418), to(#4F4228));
+/*  background:-webkit-gradient(linear, 99% 0%, 19% 13%, from(#0F0418), to(#4F4228));*/
+background:-webkit-gradient(linear, 35% 0%, 0% 21%, from(#000000), to(#4B4462));
   margin:0;
   text-decoration: center;
-  padding:60px 0px 0px 60px;
+  padding:60px 0px 20ppx 60px;
 
 }
 .jumbotron .first {
@@ -41,9 +42,12 @@ ul{
 	margin-bottom: 40px;
 	text-align: center;
 	height: 800px;
-	background-repeat: no-repeat;
+
 
  
+}
+.footer_helper{
+	height: 40px;
 }
 
 #image {
@@ -79,7 +83,8 @@ transform: rotate(23deg) ;
 
 header {
 color: white;
-background:-webkit-gradient(linear, 99% 0%, 19% 13%, from(#0F0418), to(#4F4228));
+/*background:-webkit-gradient(linear, 99% 0%, 19% 13%, from(#0F0418), to(#4F4228));*/
+background:-webkit-gradient(linear, 35% 0%, 0% 21%, from(#000000), to(#4B4462));
 height: 200px;
 text-align: center;
 padding: 30px;
@@ -95,10 +100,12 @@ padding: 30px;
 
 
 footer {
-   background:-webkit-gradient(linear, 99% 0%, 19% 13%, from(#0F0418), to(#4F4228));
+/*   background:-webkit-gradient(linear, 99% 0%, 19% 13%, from(#0F0418), to(#4F4228));*/
+background:-webkit-gradient(linear, 35% 0%, 0% 21%, from(#000000), to(#4B4462));
 	text-align: center;
 	color: white;
 	clear:both;
+	height: 40px;
 
 }
 
@@ -177,4 +184,21 @@ img{
 }
 a{
 	text-decoration: underline;
+}
+@media(min-width: 490px){
+	
+
+	.jumbotron .first{
+		height: 800px;
+		padding-left: 190px;
+	}
+
+
+}
+
+@media(max-width:500px){
+	.jumbotron{
+		padding-left: 10px;
+	}
+	
 }

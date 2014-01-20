@@ -1,42 +1,38 @@
 <div id="container1">
    <header>
-           <h1>More about your selection</h1>
-                 <h3><em><%= @result["Title"] %></em></h3>
+       <h1>More about your selection</h1>
+       <h3><em><%= @result["Title"] %></em></h3>
    </header>
  </div>
  
- 
  <div class="container"
    <div class="row">
- 	       <div class="col-md-5 col-xl-poster">
-              <img src=<%= @result["Poster"] %>< alt="No picture available"> <br/><br/>
-           </div> 
+ 	    <div class="col-md-5 col-xl-poster">
+          <img src=<%= @result["Poster"] %>< alt="No picture available"> <br/><br/>
+      </div> 
           
-          <div class ="col-md-7 details">
-           	     
-                   <div class="plot"><span id="plot"><strong>Plot</strong>: <%= @result["Plot"] %><br></span></div><br/>
-                   <div class="actors"><strong>Actors</strong>: <%= @result["Actors"] %></div><br/>
-                   <div class="moreInfo">
-                  <div class="releaseYear"><strong>Release year</strong>: <%= @result["Released"] %></div><br/>
-                  <div class="rating"><strong>Rating</strong>: <%= @result["Rated"] %></div><br/>
-                  <div class="runtime"><strong>Runtime</strong>: <%= @result["Runtime"] %></div><br/>
-                  <div class="genre"><strong>Genre</strong>: <%= @result["Genre"] %></div></br>
-                  <div class="director"><strong>Director</strong>: <%= @result["Director"] %></div>
-                   <div id="link"> <span id="link"><a href='http://www.imdb.com/title/<%= "#{@result["imdbID"]}" %>'><em><h4>link to Imdb page</h4></em></a></span></div>
-           </div> 
-                
-     </div>
-  </div>
+      <div class ="col-md-7 details">
+        <div class="row">
+          <div class="plot"><span id="plot"><strong>Plot</strong>: <%= @result["Plot"] %><br></span></div><br/>
+        </div>
+          <div class="actors"><strong>Actors</strong>: <%= @result["Actors"] %></div><br/>
+  
+           <div class="releaseYear"><strong>Release year</strong>: <%= @result["Released"] %></div><br/>
 
-
-
-
+          <div class="rating"><strong>Rating</strong>: <%= @result["Rated"] %></div><br/>
+          <div class="runtime"><strong>Runtime</strong>: <%= @result["Runtime"] %></div><br/>
+          <div class="genre"><strong>Genre</strong>: <%= @result["Genre"] %></div></br>
+          <div class="director"><strong>Director</strong>: <%= @result["Director"] %></div>
+          <div id="link"> <span id="link"><a href='http://www.imdb.com/title/<%= "#{@result["imdbID"]}" %>'><em><h4>link to Imdb page</h4></em></a></span></div>
+      </div> 
+   </div>
+ </div>
 
 <footer id="footer">
   <form accept-charset="UTF-8" action="/result" method="post">
-    <label for="movie"><h4>New Search</h4></label>
-    <input id="movie" name="movie" type="text" />
-    <input name="commit" type="submit" class="btn btn-danger btn-sm" value="Search" /> 
+  <label for="movie"><h4>New Search</h4></label>
+  <input id="movie" name="movie" type="text" />
+  <input name="commit" type="submit" class="btn btn-danger btn-sm" value="Search" /> 
 </footer>
 
 

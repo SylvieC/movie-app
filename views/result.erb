@@ -1,33 +1,28 @@
-
- 
- 
-    
+<div class="wrap">
+   <div class="jumbotron">
+      <h1>Movie Search Result</h1> 
+   </div>
   
-     <div class="jumbotron">
-        <h1>Movie Search Result</h1> 
-      </div>
-  
-  
-        <div class="container">
-        <div class="row result">
+   <div class="container">
+      <div class="row result">
          <div class="result">
-          <ul>
-         <% @sorted_by_year.each do |hash| %>
-         <div class="row">
-         <li>
-           <a  class="col-xs-9" href='/result/<%= "#{hash["imdbID"]}" %>'> <%= hash["Title"] %></a> 
-           <span class="co-xs-3"><%= hash["Year"] %></span>
-          </li>
-        </div>
-          <% end %>
-        </ul>
+           <ul>
+             <% @sorted_by_year.each do |hash| %>
+             <div class="row">
+                <li>
+                  <a  class="col-xs-9" href='/result/<%= "#{hash["imdbID"]}" %>'> <%= hash["Title"] %></a> 
+                  <span class="co-xs-3"><%= hash["Year"] %></span>
+                </li>
+              </div>
+               <% end %>
+           </ul>
+         </div>
        </div>
-     </div>
-  
-      </div>
+    </div>
   
 
-    
+     
+     
     
   
 
@@ -38,6 +33,6 @@
           <input id="movie" name="movie" type="text" />
           <input name="commit" type="submit" class="btn btn-danger btn-sm" value="Search" /> 
        </footer>
-   
-
+   </div>
+  
   
