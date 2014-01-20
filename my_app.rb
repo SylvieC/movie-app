@@ -11,13 +11,14 @@ get '/' do
   erb :index
 end
 
-
 post '/result' do
   @page_title = "movie results"
  search_str = params[:movie]
  response = Typhoeus.get("www.omdbapi.com/", :params => {:s => search_str})
  result = JSON.parse(response.body)
- 
+  if result["Search"].nil? || result["Search"].empty?
+    redirect "/"
+  end
   @sorted_by_year = result["Search"].sort_by{ |movie_hash| movie_hash["Year"]}
   erb :result
 end
@@ -28,9 +29,6 @@ get '/result/:imdb' do |imdb_id|
   id = params[:imdb]
   answer = Typhoeus.get("www.omdbapi.com/", :params => {:i => id})
   @result = JSON.parse(answer.body)
- 
-  
-
   erb :poster
 end
 
