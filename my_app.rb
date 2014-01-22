@@ -16,6 +16,9 @@ post '/result' do
  search_str = params[:movie]
  response = Typhoeus.get("www.omdbapi.com/", :params => {:s => search_str})
  result = JSON.parse(response.body)
+  if result["Search"].nil? || result["Search"].empty?
+    redirect "/"
+  end
   @sorted_by_year = result["Search"].sort_by{ |movie_hash| movie_hash["Year"]}
   erb :result
 end

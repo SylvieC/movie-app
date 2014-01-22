@@ -5,7 +5,9 @@ body{
    height:100%;
    background-color: white;
 }
-
+body html {
+	height: 100%;
+}
 #index{
 position: relative;
 left: -2em;
@@ -46,9 +48,7 @@ ul{
 
  
 }
-.footer_helper{
-	height: 40px;
-}
+
 
 #image {
 
@@ -105,8 +105,11 @@ background:-webkit-gradient(linear, 35% 0%, 0% 21%, from(#000000), to(#4B4462));
 	text-align: center;
 	color: white;
 	clear:both;
-	height: 40px;
+  padding-bottom: 60px;
+  height:70px;
+  font-size: 10px;
 
+  
 }
 
 
